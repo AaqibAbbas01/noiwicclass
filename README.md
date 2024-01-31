@@ -61,3 +61,4 @@ npx convex dev
 ```shell
 npm run dev
 ```
+# noiwicclass
