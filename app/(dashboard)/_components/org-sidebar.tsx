@@ -24,17 +24,17 @@ export const OrgSidebar = () => {
       <Link href="/">
         <div className="flex items-center gap-x-2">
           <Image
-            src="/logo.svg"
+            src="/Noiwic.png"
             alt="Logo"
             height={60}
-            width={60}
+            width={260}
           />
-          <span className={cn(
+          {/* <span className={cn(
             "font-semibold text-2xl",
             font.className,
           )}>
-            Board
-          </span>
+            Classroom
+          </span> */}
         </div>
       </Link>
       <OrganizationSwitcher

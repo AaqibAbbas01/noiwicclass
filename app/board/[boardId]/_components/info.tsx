@@ -48,17 +48,17 @@ export const Info = ({
         <Button asChild variant="board" className="px-2">
           <Link href="/">
             <Image
-              src="/logo.svg"
+              src="/Noiwic.png"
               alt="Board logo"
               height={40}
-              width={40}
+              width={90}
             />
-            <span className={cn(
+            {/* <span className={cn(
               "font-semibold text-xl ml-2 text-black",
               font.className,
             )}>
               Board
-            </span>
+            </span> */}
           </Link>
         </Button>
       </Hint>

@@ -10,18 +10,79 @@ interface ColorPickerProps {
 export const ColorPicker = ({
   onChange,
 }: ColorPickerProps) => {
+  const colorList: Color[] = [
+    { r: 243, g: 82, b: 35 },
+    { r: 255, g: 249, b: 177 },
+    { r: 68, g: 202, b: 99 },
+    { r: 39, g: 142, b: 237 },
+    { r: 155, g: 105, b: 245 },
+    { r: 252, g: 142, b: 42 },
+    { r: 0, g: 0, b: 0 },
+    { r: 255, g: 255, b: 255 },
+    // Add more colors here...
+    { r: 255, g: 0, b: 0 },
+    { r: 0, g: 255, b: 0 },
+    { r: 0, g: 0, b: 255 },
+    { r: 128, g: 128, b: 128 },
+    // Additional colors:
+    { r: 255, g: 0, b: 255 },
+    { r: 0, g: 255, b: 255 },
+    { r: 255, g: 255, b: 0 },
+    { r: 128, g: 0, b: 128 },
+    { r: 0, g: 128, b: 128 },
+    { r: 128, g: 128, b: 0 },
+    { r: 192, g: 192, b: 192 },
+    { r: 128, g: 0, b: 0 },
+    { r: 0, g: 128, b: 0 },
+    { r: 0, g: 0, b: 128 },
+    { r: 128, g: 128, b: 128 },
+    { r: 255, g: 128, b: 0 },
+    { r: 128, g: 255, b: 0 },
+    { r: 0, g: 128, b: 255 },
+    { r: 255, g: 0, b: 128 },
+    { r: 128, g: 0, b: 255 },
+    { r: 0, g: 255, b: 128 },
+    { r: 255, g: 128, b: 255 },
+    { r: 128, g: 255, b: 255 },
+    { r: 255, g: 255, b: 128 },
+    { r: 192, g: 128, b: 0 },
+    { r: 0, g: 192, b: 128 },
+    { r: 128, g: 0, b: 192 },
+    { r: 192, g: 0, b: 128 },
+    { r: 128, g: 192, b: 0 },
+    { r: 0, g: 128, b: 192 },
+    { r: 128, g: 0, b: 128 },
+    { r: 192, g: 128, b: 128 },
+    { r: 128, g: 192, b: 128 },
+    { r: 128, g: 128, b: 192 },
+    { r: 255, g: 192, b: 128 },
+    { r: 192, g: 255, b: 128 },
+    { r: 128, g: 192, b: 255 },
+    { r: 255, g: 128, b: 192 },
+    { r: 192, g: 128, b: 255 },
+    { r: 128, g: 255, b: 192 },
+    { r: 255, g: 192, b: 255 },
+    { r: 192, g: 255, b: 192 },
+    { r: 255, g: 255, b: 192 },
+    { r: 224, g: 192, b: 128 },
+    { r: 128, g: 224, b: 192 },
+    { r: 192, g: 128, b: 224 },
+    { r: 224, g: 128, b: 192 },
+    { r: 128, g: 192, b: 224 },
+    { r: 192, g: 224, b: 128 },
+    { r: 128, g: 192, b: 128 },
+    { r: 224, g: 192, b: 192 },
+    { r: 192, g: 224, b: 192 },
+    { r: 192, g: 192, b: 224 },
+  ];
+
   return (
     <div
       className="flex flex-wrap gap-2 items-center max-w-[164px] pr-2 mr-2 border-r border-neutral-200"
     >
-      <ColorButton color={{ r: 243, g: 82, b: 35 }} onClick={onChange} />
-      <ColorButton color={{ r: 255, g: 249, b: 177 }} onClick={onChange} />
-      <ColorButton color={{ r: 68, g: 202, b: 99 }} onClick={onChange} />
-      <ColorButton color={{ r: 39, g: 142, b: 237 }} onClick={onChange} />
-      <ColorButton color={{ r: 155, g: 105, b: 245 }} onClick={onChange} />
-      <ColorButton color={{ r: 252, g: 142, b: 42 }} onClick={onChange} />
-      <ColorButton color={{ r: 0, g: 0, b: 0 }} onClick={onChange} />
-      <ColorButton color={{ r: 255, g: 255, b: 255 }} onClick={onChange} />
+      {colorList.map((color, index) => (
+        <ColorButton key={index} color={color} onClick={onChange} />
+      ))}
     </div>
   )
 };
